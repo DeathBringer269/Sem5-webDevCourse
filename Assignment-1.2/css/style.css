@@ -153,6 +153,20 @@ form button:on
 }
 
 
+@media only screen and (max-width: 1200px) {
+	.container {
+		width: 90%;
+	}
+	.title {
+	height: 70px;
+	}
+
+	.welcome {
+		margin-bottom: 30px;
+	}
+
+}
+
 @media only screen and (max-width: 868px) {
   .left {
   	visibility: hidden;
@@ -174,12 +188,11 @@ form button:on
 .create {
 	color: grey;
 	font-size: 12px;
-	padding: 50px 0px 0px 0px;
+	padding: 40px 0px 10px 0px;
 }
 
 .create a {
 	font-size: 12px;
-	/*text-decoration: none;*/
 	color: green;
 }
 
