@@ -1,0 +1,191 @@
+body {
+	padding: 0px;
+	margin: 0px;
+	border: 0px;
+	height: 100vh;
+}
+
+main {
+	width: 100%;
+	height: 100%;
+	background-image: url("../media/background5.png");
+	background-repeat: no-repeat;
+	background-size: cover;
+	display: flex;
+	/*flex-direction: column;*/
+	justify-content: center;
+	align-items: center;
+}
+
+.container {
+	background-color: white;
+	/*height: 80%;*/
+	width: 70%;
+	margin: 0 auto;
+	display: flex;
+	box-shadow: 3px 2px 10px grey;
+}
+
+
+.login-part {
+	width: 50%;
+	height: 100%;
+}
+
+.left {
+	background-color: #a6cbba;
+	text-align: center;
+	font-family: 'Raleway', sans-serif;
+	color: white;
+	padding-bottom: 60px;
+}
+
+.left img {
+	width: 70%;
+	display: block;
+	margin: 20px auto;
+}
+
+.left h3, .left h5 {
+	width: 70%;
+	padding: 0px 0px 0px 0px;
+	margin: 0px auto;
+}
+
+.right {
+	background-color: white;
+	align-items: center;
+	font-family: 'Raleway', sans-serif;
+	text-align: center;
+}
+
+.title {
+	font-family: 'Pacifico', cursive;
+	letter-spacing: 1.5px;
+	text-align: center;
+	color: grey;
+	display: block;
+	height: 100px;
+}
+
+.welcome {
+	color: grey;
+	text-align: center;
+	margin-bottom: 50px;
+}
+
+form {
+	width: 70%;
+	margin: 0 auto;
+	text-align: start;
+}
+
+input, label {
+	display: block;
+	width: 100%;
+}
+
+form label {
+	color: grey;
+	font-size: 12px;
+	padding: 5px 0px 0px 0px;
+}
+
+form input {
+	border: none;
+	border-bottom: 1px solid grey;
+	padding: 5px 0px 5px 0px;
+	margin-bottom: 10px;
+}
+
+form input:focus {
+	outline: none;
+	border: none;
+	border-bottom: 1px solid #a6cbba;
+}
+
+form a {
+	font-size: 10px;
+	display: block;
+	text-align: end;
+	text-decoration: none;
+	color: green;
+}
+form button {
+	display: block;
+	margin: 20px auto;
+	border: none;
+	width: 120px;
+	height: 30px;
+	border-radius: 20px;
+	background-color: grey;
+	color: white;
+	cursor: pointer;
+
+}
+
+form button:hover {
+	background-color: #a6cbba;
+}
+
+form button:focus {
+	outline: none;
+}	
+
+form button:on
+
+.right h5 {
+	margin: 30px;
+}
+
+.right img {
+	width: 20px;
+	padding: 10px;
+	vertical-align: middle;
+}
+
+.alternate a {
+	display: block;
+	color: black;
+	text-decoration: none;
+	font-weight: 700;
+	font-size: 14px;
+}
+
+
+@media only screen and (max-width: 868px) {
+  .left {
+  	visibility: hidden;
+  	width: 0%;
+  }
+  .right {
+  	width: 100%;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+	.container {
+		width: 100%;
+		height: 100%;
+		background-color: black;
+	}
+}
+
+.create {
+	color: grey;
+	font-size: 12px;
+	padding: 50px 0px 0px 0px;
+}
+
+.create a {
+	font-size: 12px;
+	/*text-decoration: none;*/
+	color: green;
+}
+
+#github {
+	position: fixed;
+	bottom: 10px;
+	right: 10px;
+	color: grey;
+}
