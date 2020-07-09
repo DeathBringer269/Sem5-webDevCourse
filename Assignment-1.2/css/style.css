@@ -130,7 +130,12 @@ form button:hover {
 
 form button:focus {
 	outline: none;
+	
 }	
+
+form button:focus .right {
+	background-color: red;
+}
 
 form button:on
 
