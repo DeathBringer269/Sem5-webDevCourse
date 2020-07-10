@@ -5,8 +5,29 @@
 }
 
 .navbar img {
-    /* display: block; */
     width: 40px;
+}
+
+.navbar .navbar-brand .red {
+    color: var(--primary-red);
+}
+
+.navbar {
+    background-color: var(--primary-blue);
+}
+
+.nav-item a {
+    color: white !important;
+}
+
+.btn {
+    border: none;
+    background-color: var(--primary-red);
+    padding: 0px;
+}
+
+.btn:hover {
+    outline: none;
 }
 
 #blog {
@@ -29,14 +50,29 @@
     position: relative;
 }
 
+#blog .container::before {
+    content: "";
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 1px;
+    height: 100% !important;
+    z-index: 5;
+    background-color: black;
+}
+
 #social-media .container::before {
     content: "";
     position: absolute;
-    top: 100px;
+    top: -100px;
     left: 0px;
     width: 1px;
-    height: 60%;
-    background-color: black;
+    height: 200% !important;
+    background-color: white;
+}
+
+#social-media .container {
+    overflow: hidden;
 }
 
 .section-header {
@@ -49,18 +85,13 @@
 }
 
 .social-links a {
-    color: black;
+    color: white;
+    font-size: 1.5rem;
 }
 
 .social-links a:hover {
     color: var(--primary-red);
 }
-
-.social-links i {
-    font-size: 1.5rem;
-    color: white;
-}
-
 
 #vertical {   
         transform: rotate(-90deg) translateX(-50px);
@@ -73,11 +104,72 @@
     }
 }
 
+/* gameplay section */
+#gameplay .content {
+    width: 30%;
+    border-bottom: 1px solid black;
+}
+
+#gameplay .image {
+    width: 50%;
+    border: 1px solid var(--primary-red);
+    position: relative;
+    cursor: pointer;
+}
+
+#gameplay img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+#gameplay .button {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-left: -50px;
+    margin-top: -50px;
+    background-color: transparent;
+    border: 1px solid white;
+    color: white;
+    font-size: 1.5em;
+    padding: 1em 1.2em;
+    z-index: 7;
+    overflow: hidden;
+}
+
+#gameplay .image:hover .hover-effect {
+    transform: translateX(0%) skew(-10deg);
+}
+
+@media only screen and (max-width: 768px){
+    #gameplay .content {
+        width: 100%;
+    }
+    #gameplay .image {
+        width: 100%;
+    }
+}
+
+
 /* Twitter section */
 #twitter-image {
     position: relative;
     cursor: pointer;
     overflow: hidden;
+    border: 1px solid white;
+}
+
+#twitter-image::before {
+    content: "";
+    position: absolute;
+    width: 100px;
+    height: 10px;
+    background-color: white;
+    bottom: 0%;
+    left: 0%;
+    z-index: 6;
+    transform: translateY(11px) translateX(-1px);
 }
 
 #twitter-image #twitter-logo { 
@@ -94,6 +186,7 @@
     align-items: center;
     flex-direction: column;
     border: 2px solid white;
+    font-size: 1.5em;
 }
 
 #twitter-image img{
@@ -103,7 +196,7 @@
 }
 
 .hover-effect {
-    content: "aaa";
+    content: "";
     position: absolute;
     display: block;
     height: 100%;
@@ -116,9 +209,38 @@
     transform: translateX(-100%) skew(-10deg);
     transition: -webkit-transform 0.3s ease-out;
     transition: transform 0.3 ease-out;
- 
 }
 
 #twitter-image:hover .hover-effect {
     transform: translateX(0%) skew(-10deg);
+}
+
+/* Form */
+#social-media form .btn {
+    background-color: var(--primary-red);
+    padding: 1rem 1.5rem;
+    color: white;
+}
+
+#social-media form .btn:hover {
+    background-color: var(--primary-red);
+}
+/* Media queries */
+
+@media only screen and (max-width: 768px){
+    #vertical {   
+        transform: rotate(0deg);
+    }
+    
+    .section-header .title {
+        font-size: 3rem;
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    .section-header .title {
+        font-size: 2rem;
+        width: 100%;
+    }
 }
