@@ -14,11 +14,15 @@
     <!-- css -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
         integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="./css/style.css">
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <img src="../Assignment-1.2/media/favicon.png" alt="site-logo" class="navbar-brand img-fluid">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand ml-md-5" href="#"><img src="../Assignment-1.2/media/favicon.png" alt="site-logo"
+                class="img-fluid"><span class="pl-2">Alan <span class="text-danger">Dsilva</span></span></a>
+
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
             aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -27,7 +31,9 @@
         <div class="collapse navbar-collapse font-weight-bold" id="navbarSupportedContent">
             <ul class="navbar-nav ml-auto">
                 <li class="nav-item">
-                    <a class="nav-link text-success" href="#">See Code</a>
+                    <a class="nav-link text-success"
+                        href="https://github.com/DeathBringer269/Sem5-webDevCourse/tree/master/Assignment-2">See
+                        Code</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#">Learn <span class="sr-only">(current)</span></a>
@@ -36,23 +42,182 @@
                     <a class="nav-link" href="#">Blog</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link " href="#">Documentation</a>
+                    <a class="nav-link "
+                        href="https://github.com/DeathBringer269/Sem5-webDevCourse/tree/master/Assignment-2">Documentation</a>
                 </li>
             </ul>
             <form class="form-inline my-2 my-lg-0">
                 <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-                <button class="btn btn-success my-2 my-sm-0" type="submit">Sign in</button>
+                <a href="#signin" class="btn btn-success">PLAY NOW</a>
             </form>
         </div>
     </nav>
 
     <main>
-        <div class="container border-left border-primary w-100 bg-primary">
-        </div>
+        <section id="blog" class="py-3">
+            <div class="container border-left border-dark">
+                <div class="wrapper p-lg-5 p-md-3 p-sm-1 p-xs-0">
+                    <div class="section-header">
+                        <div class="title font-weight-bold text-sm-primary mx-3">
+                            <span>Sass Blog</span>
+                        </div>
+                    </div>
+                    <div class="content text-secondary">
+                        <h3 class="my-4">
+                            <span class="border-bottom red-border">The Module System is Launched</span>
+                        </h3>
+                        <p>
+                            The Sass team has known for years that the @import rule, one of the earliest additions to
+                            Sass, wasn’t as good as we wanted it. It caused a litany of problems for our users:
+                        <ul>
+                            <li>
+                                It was next to impossible to figure out where a given variable, mixin, or function
+                                (collectively called “members”) was originally defined, since anything defined in one
+                                stylesheet was available to all stylesheets that were imported after it.
+                            </li>
+                            <li>Even if you chose to explicitly import every stylesheet that defined members you used,
+                                you’d end up with duplicate CSS and strange side-effects, because stylesheets were
+                                reloaded from scratch every time they were imported.
+                            </li>
+                            <li>
+                                It wasn’t safe to use terse and simple names because there was always a possibility that
+                                some other stylesheet elsewhere in your application would use the same name and mess up
+                                your logic. To be safe users had to manually add long, awkward namespaces to everything
+                                they defined.
+                            </li>
+                            <li>
+                                Library authors had no way to ensure that their private helpers wouldn’t be accessed…
+                            </li>
+                        </ul>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="social-media" class="pb-3">
+            <div class="container">
+                <div class="section-header">
+                    <div class="title font-weight-bold text-light mx-3">
+                        <span>Stay connected to us</span>
+                    </div>
+                </div>
+                <div class="row mt-5">
+                    <div class="col-md-2">
+                        <div
+                            class="d-flex  flex-column-reverse flex-md-column justify-content-center align-items-md-center align-items-sm-start h-100">
+                            <div class="social-links d-flex flex-md-column">
+                                <a href="#" class="m-2">
+                                    <i class="fa fa-twitter"></i>
+                                </a>
+                                <a href="#" class="m-2">
+                                    <i class="fa fa-youtube-play"></i>
+                                </a>
+                                <a href="#" class="m-2">
+                                    <i class="fa fa-instagram"></i>
+                                </a>
+                                <a href="#" class="m-2">
+                                    <i class="fa fa-facebook"></i>
+                                </a>
+                            </div>
+                            <div id="vertical" class="font-weight-bold text-light">
+                                <span>Find us on</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-5">
+                        <div class="wrapper p-3">
+                            <a href="https://github.com">
+                                <div id="twitter-image">
+                                    <div id="twitter-logo" class="text-light">
+                                        <i class="fa fa-twitter"></i>
+                                    </div>
+                                    <img src="./media/twitter.jpg" alt="twitter-link-background">
+                                    <span class="hover-effect"></span>
+                                </div>
+                            </a>
+                            <div id="twitter-sub" class="text-light mt-3">
+                                <h5>Twitter</h5>
+                                <p>
+                                    Stay connected to us on Twitter to chat with the devs and for any live updates.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-5 d-flex flex-column justify-content-center">
+                        <div class="wrapper p-5 bg-light">
+                            <div class="form-header py-4">
+                                <h1 class="text-center">Sign in</h1>
+                            </div>
+                            <form action="post">
+                                <div class="form-group">
+                                    <label for="email-address">Email</label>
+                                    <input type="email" class="form-control" id="email-address" required="true">
+                                </div>
+                                <div class="form-group">
+                                    <label for="user-password">Password</label>
+                                    <input type="password" class="form-control" id="user-password" required="true">
+                                </div>
+                                <div class="d-flex justify-content-center">
+                                    <button type="submit" class="btn btn-primary"> <i class="
+                                        fa fa-arrow-right"></i></button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- <section id="valorant-section" class="py-5">
+            <div class="container border-left border-dark">
+                <div class="row">
+                    <div id="omen" class="col-md-4">
+                        <img src="./media/omen.png" alt="Omen" class="img-fluid">
+                    </div>
+                    <div class="col-md-4 text-light d-flex flex-column justify-content-center">
+                        <div class="wrapper pb-5 border-bottom border-light">
+
+                            <span class="font-weight-bold">// ROLE</span>
+                            <h3 class="font-weight-bold py-3">
+                                CONTROLLER
+                            </h3>
+                            <p>
+                                <span class="font-weight-bold d-block my-3">// BIOGRAPHY</span>
+                                A phantom of a memory, Omen hunts in the shadows. He renders enemies blind,
+                                teleports
+                                across
+                                the field, then lets paranoia take hold as his foe scrambles to learn where he might
+                                strike
+                                next.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-md-4 my-auto">
+                        <div class="bg-light p-3 shadow">
+                            <h2 class="text-center py-5">Sign in</h2>
+                            <form id="signin">
+                                <div class="form-group">
+                                    <label for="email">Email address</label>
+                                    <input type="email" class="form-control" id="email" placeholder="">
+                                </div>
+                                <div class="form-group">
+                                    <label for="password">Password</label>
+                                    <input type="password" class="form-control" id="password" placeholder="">
+                                </div>
+                                <a href="#" class="d-block text-right">Forgot password</a>
+                                <div class="d-flex justify-content-center">
+                                    <button type="submit" class="btn btn-primary">Sign
+                                        in</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section> -->
     </main>
 
     <!-- JavaScript -->
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+    <script src=" https://code.jquery.com/jquery-3.5.1.slim.min.js"
         integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
         crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"

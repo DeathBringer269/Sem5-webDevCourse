@@ -1,0 +1,124 @@
+:root {
+    --primary-red: rgb(254,74,86);
+    --background-white: rgb(236,232,225);
+    --primary-blue: rgb(15,25,35);
+}
+
+.navbar img {
+    /* display: block; */
+    width: 40px;
+}
+
+#blog {
+    background-color: var(--background-white);
+}
+
+#valorant-section {
+    background-color: var(--primary-red);
+}
+
+#social-media {
+    background-color: var(--primary-blue);
+}
+
+.red-border {
+    border-color: var(--primary-red) !important;
+}
+
+.container {
+    position: relative;
+}
+
+#social-media .container::before {
+    content: "";
+    position: absolute;
+    top: 100px;
+    left: 0px;
+    width: 1px;
+    height: 60%;
+    background-color: black;
+}
+
+.section-header {
+    text-transform: uppercase;
+}
+
+.section-header .title {
+    font-size: 5rem;
+    width: 70%;
+}
+
+.social-links a {
+    color: black;
+}
+
+.social-links a:hover {
+    color: var(--primary-red);
+}
+
+.social-links i {
+    font-size: 1.5rem;
+    color: white;
+}
+
+
+#vertical {   
+        transform: rotate(-90deg) translateX(-50px);
+        text-transform: uppercase;
+}
+
+@media only screen and (max-width: 768px){
+    #vertical {   
+        transform: rotate(0deg);
+    }
+}
+
+/* Twitter section */
+#twitter-image {
+    position: relative;
+    cursor: pointer;
+    overflow: hidden;
+}
+
+#twitter-image #twitter-logo { 
+    position: absolute;
+    left: 50%;
+    margin-left: -50px;
+    top: 50%;
+    margin-top: -50px;
+    background-color: var(--primary-blue);
+    padding: 1.5rem;
+    display: flex;
+    z-index: 4;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border: 2px solid white;
+}
+
+#twitter-image img{
+    display: block;
+    width: 100%;
+    object-fit: cover;
+}
+
+.hover-effect {
+    content: "aaa";
+    position: absolute;
+    display: block;
+    height: 100%;
+    width: 150%;
+    top: 0;
+    left: -15%;
+    z-index: 1;
+    background-color: red;
+    opacity: 0.5;
+    transform: translateX(-100%) skew(-10deg);
+    transition: -webkit-transform 0.3s ease-out;
+    transition: transform 0.3 ease-out;
+ 
+}
+
+#twitter-image:hover .hover-effect {
+    transform: translateX(0%) skew(-10deg);
+}
