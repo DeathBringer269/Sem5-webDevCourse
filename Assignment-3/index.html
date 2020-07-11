@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-sm navbar-light bg-light">
+        <a class="navbar-brand ml-md-5 font-weight-bold" href="#"><img src="../Assignment-1.2/media/favicon.png"
+                alt="site-logo" class="img-fluid"><span class="pl-2 text-dark">Alan</span><span class="red">
+                Dsilva</span></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse font-weight-bold" id="navbarSupportedContent">
+            <ul class="navbar-nav mx-auto font-weight-bold">
+                <li class="nav-item">
+                    <a class="nav-link" href="#carouselWrapper">Carousel <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#Calculator">Calculator</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#EmailValidator">Email Validator</a>
+                </li>
+            </ul>
+            <ul class="navbar-nav ml-auto font-weight-bold">
+                <li class="nav-item">
+                    <a class="nav-link text-success"
+                        href="https://github.com/DeathBringer269/Sem5-webDevCourse/tree/master/Assignment-3">See
+                        Code</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <main>
+        <div class="container p-5" id="carouselWrapper">
+            <h1 class="display-sm-1 display-md-3 pb-5 pt-5 text-light font-weight-bold">Image Carousel</h1>
+            <div class="row">
+                <div class="col-md-5 text-light p-3">
+                    <label for="secondsInput">
+                        Time in milliseconds (default 2000ms)
+                    </label>
+                    <div class="form-group">
+                        <input type="text" class="form-control" id="secondsInput" placeholder="eg. 1000 for 1 second">
+                    </div>
+                    <div>
+                        <button id="state" onclick="controlState()" class="btn btn-primary "
+                            type="button">Pause</button>
+                        <button class="btn btn-danger" onclick="reset()">Reset</button>
+                    </div>
+                    <div class="info">
+                        <h3 class="font-weight-bold">Current Interval: <span class="text-light"
+                                id="intervalDisplay"></span></h3>
+                    </div>
+                </div>
+                <div id="carousel" class="col-md-7">
+                    <img class="img-fluid" alt="" class="slideshow">
+                </div>
+            </div>
+        </div>
+
+        <div class="container" id="Calculator">
+            <h1 class="display-3 pb-5 text-light font-weight-bold">Basic Calculator</h1>
+            <table class="table table-borderless">
+                <thead>
+                    <tr>
+                        <div class="form-group">
+                            <input class="d-block w-100 text-right px-5 py-1" id="history" type="text"
+                                class="form-control">
+                        </div>
+                    </tr>
+                    <tr>
+                        <div class="form-group">
+                            <input class="d-block w-100 text-right px-5 py-1 font-weight-bold" id="current" value="0"
+                                type="text" class="form-control">
+                        </div>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td><input id="equals" type="button" value="C" onclick="reset()"></td>
+                        <td><input id="plus" type="button" value="/" onclick="operator('/')"></input></td>
+                    </tr>
+                    <tr>
+                        <td><input type="button" value="7" onclick="appendNumber(7)"></td>
+                        <td><input type="button" value="8" onclick="appendNumber(8)"></td>
+                        <td><input type="button" value="9" onclick="appendNumber(9)"></td>
+                        <td><input id="plus" type="button" value="*" onclick="operator('*')"></input></td>
+                    </tr>
+                    <tr>
+                        <td><input type="button" value="4" onclick="appendNumber(4)"></td>
+                        <td><input type="button" value="5" onclick="appendNumber(5)"></td>
+                        <td><input type="button" value="6" onclick="appendNumber(6)"></td>
+                        <td><input id="plus" type="button" value="-" onclick="operator('-')"></input></td>
+                    </tr>
+                    <tr>
+                        <td><input type="button" value="1" onclick="appendNumber(1)"></td>
+                        <td><input type="button" value="2" onclick="appendNumber(2)"></td>
+                        <td><input type="button" value="3" onclick="appendNumber(3)"></td>
+                        <td><input id="plus" type="button" value="+" onclick="operator('+')"></input></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td><input type="button" value="0" onclick="appendNumber(0)"></td>
+                        <td></td>
+                        <td><input id="equals" type="button" value="=" onclick="showResult()"></input></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="container" id="EmailValidator">
+            <h1 class="display-3 pb-5 text-light font-weight-bold">JavaScript email validation</h1>
+            <div class="row w-100">
+                <div class="col-md-6 mx-auto bg-light py-5">
+                    <div id="validator-background" class="p-3">
+                        <div class="form-group w-100">
+                            <label id="label" for="emailField">Email</label>
+                            <input id="emailField" type="text" class="form-control" placeholder="Enter your email">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- JavaScript -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+        integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+        crossorigin="anonymous"></script>
+    <script type="text/javascript" src="./js/row-1.js"></script>
+    <script type="text/javascript" src="./js/row-2.js"></script>
+    <script src="./js/row-3.js"></script>
+</body>
+
+</html>

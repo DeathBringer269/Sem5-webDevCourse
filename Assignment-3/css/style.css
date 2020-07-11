@@ -1,0 +1,68 @@
+:root {
+    --primary-red: rgb(254,74,86);
+    --background-white: rgb(236,232,225);
+    --primary-blue: rgb(15,25,35);
+}
+
+.navbar img {
+    width: 40px;
+}
+
+.navbar .navbar-brand .red {
+    color: var(--primary-red);
+}
+
+
+main {
+    background-color: cadetblue;
+    padding: 20px;
+    background: linear-gradient(336deg ,#ee7752, #e73c7e, #23a6d5,   #23d5ab, #e73c7e,#ee7752);
+}
+
+.container {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid white;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+#carouselWrapper .row {
+    height: 80%;
+}
+
+#carousel {
+    height: 100%;
+}
+
+form button {
+    margin: 0 auto;
+}
+
+td {
+    padding: 0px !important;
+}
+ 
+tr {
+    background-color: transparent;
+}
+
+.form-group {
+    width: 100%;
+}
+
+tr input {
+    width: 95% !important;
+    margin: 5px;
+    border: none;
+}
+
+tr input:focus {
+    outline: none;
+}
+
+tr input:hover {
+    background-color: rgba(97, 219, 213, 0.6);
+}
