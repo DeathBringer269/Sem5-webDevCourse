@@ -1,4 +1,4 @@
-# Sem 5 web development course work previews
+# Sem5-webDevCourse
 
 ### Index
 * [Assignment 1.2](#Assignment-1.2)
