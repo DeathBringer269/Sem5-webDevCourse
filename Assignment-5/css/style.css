@@ -1,0 +1,13 @@
+:root {
+    --primary-red: rgb(254,74,86);
+    --background-white: rgb(236,232,225);
+    --primary-blue: rgb(15,25,35);
+}
+
+.navbar img {
+    width: 40px;
+}
+
+.navbar .navbar-brand .red {
+    color: var(--primary-red);
+}
