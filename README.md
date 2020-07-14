@@ -21,5 +21,5 @@
 ## [Assignment 3](https://deathbringer269.github.io/Sem5-webDevCourse/Assignment-3/index.html)
 ![](./Assignment-3/media/screenshot.png)
 ## [Assignment 5](https://deathbringer269.github.io/Sem5-webDevCourse/Assignment-5/index.html)
-![](./Assignment-4/media/screenshot.png)
+![](./Assignment-5/media/screenshot.png)
 
