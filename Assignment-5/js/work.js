@@ -35,12 +35,7 @@ function getProducts() {
     var xmlhttp = new XMLHttpRequest();
     xmlhttp.onreadystatechange = function () {
         if (this.readyState == 4 && this.status == 200) {
-            console.log("JDFLS");
             document.getElementById("tableBody").innerHTML = this.responseText;
-            var deleteList = document.getElementById("tableBody").getElementsByTagName("td")[0].innerHTML;
-            console.log("here");
-            console.log(deleteList);
-            // assign();
         }
     }
     xmlhttp.open("POST", "./getProduct.php", true);
@@ -59,15 +54,12 @@ function addProduct() {
     }
 
     var xmlhttp = new XMLHttpRequest();
-    console.log("DJFL");
     xmlhttp.onreadystatechange = function () {
         if (this.readyState == 4 && this.status == 200) {
-            console.log("DJL");
             document.getElementById("tableBody").innerHTML = this.responseText;
-            // assign();
-            // for (var i = 0; i < 4; i++) {
-            //     document.getElementById("new-product-form").getElementsByClassName("form-control")[i].value = "";
-            // }
+            for (var i = 0; i < 4; i++) {
+                document.getElementById("new-product-form").getElementsByClassName("form-control")[i].value = "";
+            }
         }
     }
     xmlhttp.open("POST", "./addProduct.php", true);
@@ -75,20 +67,16 @@ function addProduct() {
     xmlhttp.send("product-id=" + id + "&product-name=" + name + "&product-price=" + price + "&product-description=" + description);
 }
 
-
-// var deleteList = document.getElementById("tableBody").getElementsByClassName("fa-trash-o");
-
-// console.log(deleteList.innerHTML);
-
-// function assign() {
-//     for (var i = 0; i < deleteList.length; i++) {
-//         var deleteIcon = deleteList[i];
-//         var pid = deleteIcon.parentNode.id;
-//         console.log("herlkje");
-//         console.log(pid);
-//     }
-// }
-
-function deleteProduct() {
-
+function deleteProduct(id) {
+    console.log(arguments[0]);
+    var xmlhttp = new XMLHttpRequest();
+    xmlhttp.onreadystatechange = function () {
+        if (this.readyState == 4 && this.status == 200) {
+            getProducts();
+            document.getElementById("tableBody").innerHTML = this.responseText;
+        }
+    }
+    xmlhttp.open("POST", "./deleteProduct.php", true);
+    xmlhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+    xmlhttp.send('id=' + id);
 }

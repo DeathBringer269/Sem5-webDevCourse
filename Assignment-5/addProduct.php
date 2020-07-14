@@ -39,12 +39,6 @@
     )";
     $conn->query($query);
 
-    // if (mysqli_query($conn, $query)) {
-    //     // echo "Table created succesfully<br>";
-    // } else {
-    //     // echo "Table already exists ". $conn->error;
-    // }
-
     $query = "insert into product (prod_id, prod_name, prod_price, prod_desc) 
     VALUES('$id', '$name', '$price', '$description')";
     $conn->query($query);
@@ -65,7 +59,7 @@
 
 
             echo "<td>".$id."</td><td>".$name."</td><td>".$price."</td><td>".$description."</td>";
-
+            echo "<td id='".$row["id"]."'><button class='btn btn-outline-danger btn-sm' onclick='deleteProduct(".$row["id"].")'><i class='fa fa-trash-o'></button></td>";
             echo "</tr>";
         }
     }

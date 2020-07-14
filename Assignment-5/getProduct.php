@@ -40,7 +40,7 @@
             $description = strlen($description) > 20 ? substr($description, 0, 20)."..." : $description;
 
             echo "<td>".$id."</td><td>".$name."</td><td>".$price."</td><td>".$description."</td>";
-            echo "<td id='".$row["id"]."'><button onclick='deleteProduct('".$row["id"]."')'><i class='fa fa-trash-o'></button></td>";
+            echo "<td id='".$row["id"]."'><button class='btn btn-outline-danger btn-sm' onclick='deleteProduct(".$row["id"].")'><i class='fa fa-trash-o'></button></td>";
             echo "</tr>";
         }
     }
