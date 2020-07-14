@@ -35,8 +35,12 @@ function getProducts() {
     var xmlhttp = new XMLHttpRequest();
     xmlhttp.onreadystatechange = function () {
         if (this.readyState == 4 && this.status == 200) {
+            console.log("JDFLS");
             document.getElementById("tableBody").innerHTML = this.responseText;
-            assign();
+            var deleteList = document.getElementById("tableBody").getElementsByTagName("td")[0].innerHTML;
+            console.log("here");
+            console.log(deleteList);
+            // assign();
         }
     }
     xmlhttp.open("POST", "./getProduct.php", true);
@@ -55,14 +59,15 @@ function addProduct() {
     }
 
     var xmlhttp = new XMLHttpRequest();
+    console.log("DJFL");
     xmlhttp.onreadystatechange = function () {
         if (this.readyState == 4 && this.status == 200) {
-
+            console.log("DJL");
             document.getElementById("tableBody").innerHTML = this.responseText;
-            assign();
-            for (var i = 0; i < 4; i++) {
-                document.getElementById("new-product-form").getElementsByClassName("form-control")[i].value = "";
-            }
+            // assign();
+            // for (var i = 0; i < 4; i++) {
+            //     document.getElementById("new-product-form").getElementsByClassName("form-control")[i].value = "";
+            // }
         }
     }
     xmlhttp.open("POST", "./addProduct.php", true);
@@ -71,19 +76,19 @@ function addProduct() {
 }
 
 
-var deleteList = document.getElementById("tableBody").getElementsByClassName("fa-trash-o");
+// var deleteList = document.getElementById("tableBody").getElementsByClassName("fa-trash-o");
 
-console.log(deleteList.innerHTML);
+// console.log(deleteList.innerHTML);
 
-function assign() {
-    for (var i = 0; i < deleteList.length; i++) {
-        var deleteIcon = deleteList[i];
-        var pid = deleteIcon.parentNode.id;
-        console.log("herlkje");
-        console.log(pid);
-    }
-}
+// function assign() {
+//     for (var i = 0; i < deleteList.length; i++) {
+//         var deleteIcon = deleteList[i];
+//         var pid = deleteIcon.parentNode.id;
+//         console.log("herlkje");
+//         console.log(pid);
+//     }
+// }
 
-deleteList[0].onsubmit = function deleteProduct() {
-    console.log("kd");
+function deleteProduct() {
+
 }
