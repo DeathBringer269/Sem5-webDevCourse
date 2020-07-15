@@ -4,7 +4,7 @@
 * Enter localhost:8000 in your browser
 
 # Preview
-![](./Assignment-4/media/screenshot.png)
+![](./media/screenshot.png)
 
 ## Dependencies
 * Python
