@@ -10,6 +10,9 @@
 * [Assignment 3](#Assignment-3)
   - [View live](https://deathbringer269.github.io/Sem5-webDevCourse/Assignment-3/index.html)
   - [View code](https://github.com/DeathBringer269/Sem5-webDevCourse/tree/master/Assignment-3)
+* [Assignment 4](#Assignment-4)
+  - [View live](https://github.com/DeathBringer269/Sem5-webDevCourse/tree/master/Assignment-4/readme.md)
+  - [View code](https://github.com/DeathBringer269/Sem5-webDevCourse/tree/master/Assignment-4)
 * [Assignment 5](#Assignment-5)
   - [View live](https://deathbringer269.github.io/Sem5-webDevCourse/Assignment-5/index.html)
   - [View code](https://github.com/DeathBringer269/Sem5-webDevCourse/tree/master/Assignment-5)
@@ -20,6 +23,8 @@
 ![](./Assignment-2/media/screenshot.png)
 ## [Assignment 3](https://deathbringer269.github.io/Sem5-webDevCourse/Assignment-3/index.html)
 ![](./Assignment-3/media/screenshot.png)
+## [Assignment 4](https://deathbringer269.github.io/Sem5-webDevCourse/Assignment-4/readme.md)
+![](./Assignment-4/media/screenshot.png)
 ## [Assignment 5](https://deathbringer269.github.io/Sem5-webDevCourse/Assignment-5/index.html)
 ![](./Assignment-5/media/screenshot.png)
 
