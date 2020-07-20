@@ -2,7 +2,7 @@
 
 ### Index
 * [Assignment 1.2](#Assignment-1.2)
-  - [View live](https://deathbringer269.github.io/Sem5-webDevCourse/Assignment-1.2/index.html)
+  - [View live](https://alandsilva26.github.io/Sem5-webDevCourse/Assignment-1.2/index.html)
   - [View code](https://github.com/DeathBringer269/Sem5-webDevCourse/tree/master/Assignment-1.2)
 * [Assignment 2](#Assignment-2)
   - [View live](https://deathbringer269.github.io/Sem5-webDevCourse/Assignment-2/index.html)
